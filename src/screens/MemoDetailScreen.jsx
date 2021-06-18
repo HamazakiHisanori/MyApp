@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     height: 88,
     justifyContent: 'center',
     paddingVertical: 24,
-    paddingHorizontal: 19,
+    paddingHorizontal: 27,
   },
   memoTitle: {
     color: 'white',
