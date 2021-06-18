@@ -13,7 +13,7 @@ export default function MemoListScreen() {
 
       <MemoList />
 
-      <CircleButton>+</CircleButton>
+      <CircleButton name="tag-plus-outline" />
 
     </View>
 
