@@ -18,6 +18,8 @@ const styles = StyleSheet.create({
     height: 104,
     backgroundColor: 'purple',
     justifyContent: 'flex-end',
+    borderBottomWidth: 1,
+    borderColor: 'rgba(0, 0, 0, 0.3)',
   },
   appbarInner: {
     alignItems: 'center',

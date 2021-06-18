@@ -1,18 +1,23 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
 
-export default function circleButton(props) {
-  const { children } = props;
+export default function CircleButton(props) {
+  const { children, style } = props;
   return (
-    <View style={styles.circleButton}>
+    <View style={[styles.circleButton, style]}>
       <Text style={styles.circleButtonText}>{children}</Text>
     </View>
   );
 }
 
-circleButton.protoTypes = {
+CircleButton.propTypes = {
   children: string.isRequired,
+  style: shape(),
+};
+
+CircleButton.defaultProps = {
+  style: null,
 };
 
 const styles = StyleSheet.create({
@@ -23,8 +28,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    right: 40,
-    bottom: 40,
+    right: 43,
+    bottom: 48,
     borderRadius: 32,
     shadowColor: 'black',
     shadowOffset: { width: 0, height: 8 },
