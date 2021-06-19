@@ -1,42 +1,62 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity,
+  View, Text, StyleSheet, TouchableOpacity, Alert,
 } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MemoList() {
+  const navigation = useNavigation();
   return (
     <View>
 
-      <View style={styles.memoListItem}>
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>12月24日 0:00</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => { Alert.alert('delete?'); }}
+          style={styles.memoDelete}
+        >
           <MaterialCommunityIcons name="close-circle-outline" size={24} color="rgba(0, 0, 0, 0.3)" />
         </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
 
-      <View style={styles.memoListItem}>
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>12月24日 0:00</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => { Alert.alert('delete?'); }}
+          style={styles.memoDelete}
+        >
           <MaterialCommunityIcons name="close-circle-outline" size={24} color="rgba(0, 0, 0, 0.3)" />
         </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
 
-      <View style={styles.memoListItem}>
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>12月24日 0:00</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => { Alert.alert('delete?'); }}
+          style={styles.memoDelete}
+        >
           <MaterialCommunityIcons name="close-circle-outline" size={24} color="rgba(0, 0, 0, 0.3)" />
         </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
 
     </View>
   );
@@ -61,5 +81,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 16,
     color: 'gray',
+  },
+  memoDelete: {
+    padding: 8,
   },
 });
