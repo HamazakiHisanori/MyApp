@@ -26,7 +26,7 @@ export default function MemoEditScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: 'white',
   },
   inputContainer: {
     paddingHorizontal: 27,
