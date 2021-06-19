@@ -3,7 +3,7 @@ import {
   View, Text, StyleSheet, ScrollView,
 } from 'react-native';
 
-import AppBar from '../components/appBar';
+import AppBar from '../components/AppBar';
 import CircleButton from '../components/CircleButton';
 
 export default function MemoDetailScreen() {
