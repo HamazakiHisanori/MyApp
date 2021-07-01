@@ -19,9 +19,8 @@ if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
-LogBox.ignoreLogs(['setting a timer']);
-
 const Stack = createStackNavigator();
+LogBox.ignoreLogs(['Setting a timer']);
 
 export default function App() {
   return (
